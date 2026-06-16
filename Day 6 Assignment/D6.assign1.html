@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+        const name = document.getElementById("name")
+		const name1=document.getElementById("dName")
+        const gender = document.getElementById("gender")
+        const gen = document.getElementById("dGender")
+        const mail = document.getElementById("email")
+        const gmail = document.getElementById("dEmail")
+        const phone = document.getElementById("mobile")
+        const mobile = document.getElementById("dMobile")
+		function showName() {
+            const data1=name.value
+            name1.innerText = data1
+		}
+
+		function showGender() {
+            const data2 = gender.value
+            gen.innerText = data2
+		}
+
+		function showEmail() {
+            const data3 = mail.value
+            gmail.innerText = data3
+		}
+
+		function showMobile() {
+            const data4 = phone.value
+            mobile.innerText = data4
+		}
+
+		function resetForm() {
+			name1.innerText = " "
+            gen.innerText = " "
+            gmail.innerText = " "
+            mobile.innerText = " "
+		}
+
+		function resetDisplay() {
+            mobile.innerText = " Mobile"
+            gmail.innerText = " Gmail"
+            gen.innerText = "Gender "
+			name1.innerText = "Name"
+		}
+	</script>
+</body>
+</html>
